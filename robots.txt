@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sarahr83.github.io/joylink-guide/sitemap.xml
