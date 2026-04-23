@@ -2,74 +2,263 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>Guide NFC Joylink — Bijoux connectés & bijoux-souvenirs</title>
-  <meta name="description" content="Comprendre l’usage du NFC dans les bijoux connectés Joylink : principes, cas d’usage et ressources officielles. Accès direct aux pages bijoux-souvenirs, bracelets et bagues NFC.">
+  <title>Guide NFC Joylink | Comprendre les bijoux connectés</title>
+  <meta name="description" content="Guide NFC Joylink : comprendre le fonctionnement des bijoux connectés, leurs usages et accéder aux ressources officielles de la marque.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="index,follow">
+  <meta name="robots" content="index,follow,max-image-preview:large">
 
-  <!-- Vérifications moteurs -->
   <meta name="google-site-verification" content="6mJn9oHnkF9hKuln3HNC2vMJ07TykEugZiNrNzvZTIM">
   <meta name="msvalidate.01" content="B8A4352619D595A99BAE5D2FEA62F892">
 
-  
   <link rel="canonical" href="https://sarahr83.github.io/joylink-guide/">
 
-  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Joylink — Guide NFC">
-  <meta property="og:title" content="Guide NFC Joylink — Bijoux connectés & bijoux-souvenirs">
-  <meta property="og:description" content="Guide simple pour comprendre les bijoux connectés NFC et accéder aux ressources officielles Joylink.">
+  <meta property="og:title" content="Guide NFC Joylink | Comprendre les bijoux connectés">
+  <meta property="og:description" content="Un guide simple pour comprendre l’usage du NFC dans les bijoux connectés et découvrir les ressources officielles Joylink.">
   <meta property="og:url" content="https://sarahr83.github.io/joylink-guide/">
-  <meta name="twitter:card" content="summary">
-
+  <meta property="og:image" content="https://sarahr83.github.io/joylink-guide/joylink-guide-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Guide NFC Joylink">
+  <meta name="twitter:card" content="summary_large_image">
 
   <style>
-    :root{--mw:860px}
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;line-height:1.6;margin:40px auto;max-width:var(--mw);padding:0 16px}
-    header,footer{opacity:.85}
-    h1{line-height:1.2;margin:.2em 0}
-    ul{padding-left:1.1rem}
-    a{text-decoration:none;border-bottom:1px solid currentColor}
-    .note{background:#f8fafc;border:1px solid #e5e7eb;border-radius:12px;padding:12px;margin:16px 0}
+    :root{
+      --bg:#ffffff;
+      --text:#111111;
+      --muted:#616161;
+      --line:#e8e8e8;
+      --soft:#f7f7f7;
+      --max:940px;
+      --radius:18px;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;
+      line-height:1.7;
+    }
+
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:32px 18px 56px;
+    }
+
+    .topbar{
+      padding-bottom:18px;
+      border-bottom:1px solid var(--line);
+      color:var(--muted);
+      font-size:.96rem;
+    }
+
+    .hero{
+      padding:34px 0 24px;
+    }
+
+    .eyebrow{
+      margin:0 0 10px;
+      color:var(--muted);
+      font-size:.84rem;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+
+    h1{
+      margin:0 0 14px;
+      font-size:clamp(2.1rem,4.8vw,3.8rem);
+      line-height:1.04;
+      letter-spacing:-.04em;
+      max-width:860px;
+    }
+
+    .intro{
+      max-width:780px;
+      color:var(--muted);
+      font-size:1.05rem;
+      margin:0;
+    }
+
+    section{
+      margin:34px 0;
+    }
+
+    h2{
+      margin:0 0 14px;
+      font-size:1.5rem;
+      line-height:1.18;
+      letter-spacing:-.02em;
+    }
+
+    p{
+      margin:0 0 14px;
+    }
+
+    a{
+      color:var(--text);
+      text-decoration:none;
+      border-bottom:1px solid currentColor;
+    }
+
+    .card{
+      background:var(--soft);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:22px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:18px;
+    }
+
+    .grid .card h3{
+      margin:0 0 10px;
+      font-size:1.08rem;
+      line-height:1.2;
+    }
+
+    .grid .card p{
+      color:var(--muted);
+    }
+
+    .list{
+      padding-left:1.15rem;
+      margin:0;
+    }
+
+    .list li{
+      margin-bottom:8px;
+    }
+
+    footer{
+      margin-top:44px;
+      padding-top:18px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:.95rem;
+    }
+
+    @media (max-width: 760px){
+      .grid{
+        grid-template-columns:1fr;
+      }
+    }
   </style>
 
-  
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
-    "@type":"WebPage",
-    "name":"Guide NFC Joylink — Bijoux connectés & bijoux-souvenirs",
-    "url":"https://sarahr83.github.io/joylink-guide/",
-    "about":[
-      {"@type":"Thing","name":"NFC"},
-      {"@type":"Thing","name":"Bijoux connectés"},
-      {"@type":"Thing","name":"Bijoux souvenirs"}
-    ],
-    "publisher":{"@type":"Organization","name":"Joylink","url":"https://www.joylink.fr"},
-    "mainEntityOfPage":"https://sarahr83.github.io/joylink-guide/"
+    "@graph":[
+      {
+        "@type":"Organization",
+        "@id":"https://sarahr83.github.io/joylink-guide/#organization",
+        "name":"Joylink",
+        "url":"https://www.joylink.fr"
+      },
+      {
+        "@type":"WebPage",
+        "@id":"https://sarahr83.github.io/joylink-guide/#webpage",
+        "name":"Guide NFC Joylink | Comprendre les bijoux connectés",
+        "url":"https://sarahr83.github.io/joylink-guide/",
+        "description":"Guide NFC Joylink : comprendre le fonctionnement des bijoux connectés, leurs usages et accéder aux ressources officielles de la marque.",
+        "about":[
+          {"@type":"Thing","name":"NFC"},
+          {"@type":"Thing","name":"Bijou connecté"},
+          {"@type":"Thing","name":"Bijou souvenir connecté"}
+        ],
+        "publisher":{"@id":"https://sarahr83.github.io/joylink-guide/#organization"}
+      }
+    ]
   }
   </script>
 </head>
 <body>
- 
-  <header>Ressource presse & technique — Joylink</header>
+  <main class="wrap">
+    <header class="topbar">Ressource éditoriale — Joylink</header>
 
-  <h1>Guide NFC — Bijoux connectés</h1>
-  <p>Ressources pour comprendre l’usage du NFC dans les bijoux connectés (compatibilité, cas d’usage, bonnes pratiques) et accéder aux pages officielles Joylink.</p>
+    <section class="hero">
+      <p class="eyebrow">Guide NFC</p>
+      <h1>Comprendre le NFC dans les bijoux connectés</h1>
+      <p class="intro">
+        Le NFC permet de relier un bijou physique à un contenu numérique accessible en un simple scan avec un smartphone.
+        Ce guide présente le principe, les usages les plus concrets et les ressources officielles Joylink pour aller plus loin.
+      </p>
+    </section>
 
-  <div class="note">
-    <strong>Raccourcis utiles</strong>
-    <ul>
-      <li><a href="https://www.joylink.fr/comment-fonctionnent-les-bijoux-nfc-joylink/" target="_blank" rel="noopener">comment fonctionnent les bijoux NFC Joylink</a></li>
-      <li><a href="https://www.joylink.fr/bijoux-souvenirs-connectes/" target="_blank" rel="noopener">bijoux‑souvenirs connectés</a></li>
-      <li><a href="https://www.joylink.fr/bracelets-connectes/" target="_blank" rel="noopener">bracelet NFC personnalisé</a></li>
-      <li><a href="https://www.joylink.fr/bagues-connectees/" target="_blank" rel="noopener">bague NFC</a></li>
-      <li><a href="https://www.joylink.fr/" target="_blank" rel="noopener">Joylink — bijou souvenir connecté</a></li>
-    </ul>
-  </div>
+    <section aria-labelledby="definition-title">
+      <h2 id="definition-title">À quoi sert le NFC dans un bijou connecté&nbsp;?</h2>
+      <div class="card">
+        <p>
+          Dans un bijou connecté, le NFC ne sert pas à “faire gadget”. Il sert à créer un accès simple, discret et immédiat
+          à un contenu associé au bijou : une photo, une vidéo, un message vocal ou un souvenir particulier.
+        </p>
+        <p>
+          Cette technologie permet de garder près de soi quelque chose de personnel, tout en conservant l’élégance d’un bijou classique.
+        </p>
+      </div>
+    </section>
 
-  <footer>
-    <small>Généré le 2025‑08‑18 — Hébergé statiquement (liens DoFollow par défaut).</small>
-  </footer>
+    <section aria-labelledby="usage-title">
+      <h2 id="usage-title">Des usages concrets, pas juste de la technologie</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Souvenir personnel</h3>
+          <p>Le bijou devient un support émotionnel capable de redonner accès à un moment fort ou à un message précieux.</p>
+        </article>
+
+        <article class="card">
+          <h3>Cadeau porteur de sens</h3>
+          <p>Le NFC transforme un bijou en expérience, ce qui change complètement la perception du cadeau.</p>
+        </article>
+
+        <article class="card">
+          <h3>Usage simple</h3>
+          <p>L’intérêt du NFC est justement d’éviter une expérience lourde ou compliquée pour l’utilisateur.</p>
+        </article>
+
+        <article class="card">
+          <h3>Lien entre objet et mémoire</h3>
+          <p>Le bijou conserve sa dimension esthétique tout en donnant accès à une seconde dimension plus intime.</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="ressources-title">
+      <h2 id="ressources-title">Ressources officielles Joylink</h2>
+      <div class="card">
+        <ul class="list">
+          <li><a href="https://www.joylink.fr/comment-fonctionnent-les-bijoux-nfc-joylink/" target="_blank" rel="noopener">Comprendre comment fonctionnent les bijoux NFC Joylink</a></li>
+          <li><a href="https://www.joylink.fr/bijoux-souvenirs-connectes/" target="_blank" rel="noopener">Découvrir l’univers des bijoux souvenirs connectés</a></li>
+          <li><a href="https://www.joylink.fr/bracelets-connectes/" target="_blank" rel="noopener">Voir la collection de bracelets connectés</a></li>
+          <li><a href="https://www.joylink.fr/bagues-connectees/" target="_blank" rel="noopener">Explorer les bagues connectées Joylink</a></li>
+          <li><a href="https://www.joylink.fr/" target="_blank" rel="noopener">Accéder au site officiel Joylink</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section aria-labelledby="positionnement-title">
+      <h2 id="positionnement-title">Pourquoi ce sujet mérite un guide dédié</h2>
+      <p>
+        Le terme NFC est souvent présenté de manière trop technique. Or, dans le cas d’un bijou connecté, la vraie question n’est pas
+        la puce elle-même, mais ce qu’elle permet : créer un lien immédiat entre un objet et une émotion.
+      </p>
+      <p>
+        C’est précisément ce qui différencie un simple accessoire d’un bijou souvenir connecté pensé pour garder près de soi
+        ce qui compte le plus.
+      </p>
+    </section>
+
+    <footer>
+      <small>Dernière mise à jour éditoriale : 23/04/2026</small>
+    </footer>
+  </main>
 </body>
 </html>
